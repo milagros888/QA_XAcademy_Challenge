@@ -11,8 +11,6 @@
   
 ## 👥 Integrantes de Equipo
   * Hilen Ortiz
-  * Luana Ruffinelli
-  * Marcelo Bornices
   * Milagros Escarlon
   * Natacha Rodriguez
   * Rocio Vera López
