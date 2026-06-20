@@ -1,0 +1,24 @@
+{
+  "name": "qa_xacademy_challenge",
+  "version": "1.0.0",
+  "description": "---",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/milagros888/QA_XAcademy_Challenge.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/milagros888/QA_XAcademy_Challenge/issues"
+  },
+  "homepage": "https://github.com/milagros888/QA_XAcademy_Challenge#readme",
+  "devDependencies": {
+    "cypress": "^15.17.0"
+  }
+}
