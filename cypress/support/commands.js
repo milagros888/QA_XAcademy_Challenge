@@ -23,3 +23,20 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+// Comando personalizado para generar fechas futuras
+Cypress.Commands.add("generarFechaFutura", (dias) => {
+  const fecha = new Date();
+  fecha.setDate(fecha.getDate() + dias);
+
+  const dia = String(fecha.getDate()).padStart(2, "0");
+  const mes = String(fecha.getMonth() + 1).padStart(2, "0");
+  const anio = fecha.getFullYear();
+
+  // El formato devuelto es YYYY-MM-DD que es el estándar que usa Shady Meadows
+  const fechaFormateada = `${anio}-${mes}-${dia}`;
+
+  return {
+    paraEscribir: fechaFormateada,
+    paraValidar: fechaFormateada,
+  };
+});
