@@ -29,7 +29,7 @@
 ## 📁 Estructura del Proyecto
 
 * 📁 **cypress/**: Carpeta principal de Cypress.
-  * 📁 **e2e/**: Aquí se encuentran los archivos de prueba (.cy.js).
+  * 📁 **e2e/**: Aquí se encuentra el archivo principal con todos los casos de prueba (myTestRestfulBooker.cy.js).
   * 📁 **fixtures/**: Archivos de datos estáticos (JSON) para pruebas basadas en datos.
   * 📁 **support/**: Comandos personalizados (`commands.js`) y configuraciones globales.
 * 📄 **cypress.config.js**: Archivo de configuración global de Cypress.
