@@ -1,45 +1,68 @@
 # 🚀 Challenge de Cypress Automation | XAcademy - Technology with Purpose
 
+Bienvenido al repositorio oficial del equipo para el Trabajo Final de la Cohorte I - 2026. En este proyecto ponemos en práctica los conocimientos adquiridos de QA Automation aplicando pruebas End-to-End (E2E) sobre el sistema web real de reservas de un Bed & Breakfast: [Shady Meadows](https://automationintesting.online/).
+
 ---
 
-## 🔗 Enlaces importantes
+## 🔗 Enlaces Importantes de Documentación
 
-* [Drive](https://drive.google.com/drive/folders/15RXJyLj8uruPAnnh6wLKC6I6FTHYMP23) - Carpeta compartida para el equipo.
-* [Casos de Prueba](https://docs.google.com/spreadsheets/d/1HvECogJ3xM9bXqu5aTH7l92xTlssPBjfWKN74BWISFI/edit?usp=sharing) - Planilla con nuestros casos de prueba documentados.
-* [Docs + Email](https://docs.google.com/document/d/1D8KksuMfrgKq27PqPOypoTpsfxOe8_kiHA4LyXXDPLw/edit?usp=sharing) - Documento compartido con Emails de equipo.
-* [Challenge](https://drive.google.com/file/d/1Nhhz3rIxxQguuZFb5Fm_fAJPHPUruhgg/view) - Datos sobre el Challenge.
-* [Trello](https://trello.com/b/M4ziTvVO/grupo-19-challenge) - Ticketera para el reporte de Bugs.
-* [Automation In Testing](https://automationintesting.online/) - Entorno de pruebas.
-  
-## 👥 Integrantes de Equipo 19
-  * Hilen Ortiz
-  * Milagros Escarlon
-  * Natacha Rodriguez
-  * Rocio Vera López
+Para cumplir con los criterios de evaluación, toda nuestra documentación técnica está centralizada en los siguientes enlaces:
+
+* 📄 **[Plan de Pruebas (Casos de Prueba)](https://docs.google.com/spreadsheets/d/1HvECogJ3xM9bXqu5aTH7l92xTlssPBjfWKN74BWISFI/edit?usp=sharing)**: Documento detallado en Drive con la redacción de escenarios positivos, negativos y de borde.
+* 🐞 **[Tablero de Bugs (Trello)](https://trello.com/invite/b/6a2b29b40986c4a96b7e7842/ATTI491d39acad953056a71f3f9f80b0b8698CDBE2AE/grupo-19-challenge)**: Gestión y reporte de defectos encontrados en la aplicación.
+* 🌐 **[Entorno de Pruebas](https://automationintesting.online/)**: Aplicación web testeada.
+* 📋 **[Consigna del Challenge](https://drive.google.com/file/d/1Nhhz3rIxxQguuZFb5Fm_fAJPHPUruhgg/view)**: Requisitos del proyecto.
+
+---
+
+## 👥 Integrantes del Equipo
+
+* Hilen Ortiz
+* Milagros Escarlon
+* Natacha Rodriguez
+* Rocio Vera López
+
+---
+
+## 🎯 Escenarios Automatizados
+
+Nuestra suite principal (`myTestRestfulBooker.cy.js`) abarca los siguientes flujos requeridos, diseñados con la premisa de que los tests puedan ejecutarse de forma 100% independiente:
+
+1. **Reserva exitosa como usuario invitado:** Navegación, selección de fechas, llenado de formulario con datos válidos y aserción de confirmación exitosa.
+2. **Validaciones del formulario de reserva:** Intentos de envío con campos vacíos y validación de la aparición de alertas de error, asegurando que no se concrete la reserva.
+3. **Formulario de contacto:** Llenado y envío de mensaje de contacto con datos válidos y verificación de la notificación de éxito.
+
+*(Adicionalmente, se incluyeron casos extra para el módulo de Administración utilizando técnicas avanzadas de testing).*
 
 ---
 
 ## 🛠️ Tecnologías y Herramientas Utilizadas
 
-* [Cypress](https://www.cypress.io/) - Framework de pruebas de extremo a extremo (E2E).
-* [JavaScript](https://developer.mozilla.org/es/docs/Web/JavaScript) - Lenguaje utilizado.
-* [Node.js](https://nodejs.org/) - Entorno de ejecución para Javascript.
-* [Visual Studio Code](https://code.visualstudio.com/) - IDE de desarrollo.
+* **[Cypress](https://www.cypress.io/)**: Framework de pruebas End-to-End.
+* **[JavaScript](https://developer.mozilla.org/es/docs/Web/JavaScript)**: Lenguaje de programación.
+* **[Node.js](https://nodejs.org/)**: Entorno de ejecución.
+* **[Visual Studio Code](https://code.visualstudio.com/)**: IDE de desarrollo.
 
 ---
-   
+
 ## 📁 Estructura del Proyecto
 
-* 📁 **cypress/**: Carpeta principal de Cypress.
-  * 📁 **e2e/**: Aquí se encuentra el archivo principal con todos los casos de prueba (myTestRestfulBooker.cy.js).
-  * 📁 **fixtures/**: Archivos de datos estáticos (JSON) para pruebas basadas en datos.
-  * 📁 **support/**: Comandos personalizados (`commands.js`) y configuraciones globales.
-* 📄 **cypress.config.js**: Archivo de configuración global de Cypress.
-* 📄 **jsconfig.json**: Archivo que admite autocompletado de lenguaje Cypress.
-* 📄 **package.json**: Dependencias, librerías y scripts de ejecución del proyecto.
-* 📄 **README.md**: Documentación del repositorio (este archivo).
+El proyecto está diseñado siguiendo las buenas prácticas de Page Object Model y Data-Driven Testing:
 
-## 📅 Fecha Límite de Entrega:
-25/06/2026
+* 📁 **`cypress/e2e/`**: Contiene el archivo principal de pruebas `myTestRestfulBooker.cy.js`.
+* 📁 **`cypress/fixtures/`**: Archivos JSON estáticos para parametrizar datos (Data-Driven Testing).
+* 📁 **`cypress/support/`**: Comandos personalizados (`commands.js`) para evitar la repetición de código y configuraciones globales.
+* 📄 **`cypress.config.js`**: Configuración global de la herramienta.
+* 📄 **`package.json`**: Dependencias y scripts de ejecución.
 
-## 💡 Este repositorio está en constante evolución.
+---
+
+## 🚀 Cómo ejecutar las pruebas
+
+1. Clona este repositorio en tu máquina local.
+2. Abre la terminal en la raíz del proyecto y ejecuta `npm install` para instalar las dependencias.
+3. Para abrir la interfaz gráfica de Cypress, ejecuta: `npx cypress open`.
+4. Para correr las pruebas en modo *headless* (consola), ejecuta: `npx cypress run`.
+
+---
+**📅 Fecha Límite de Entrega:** 25/06/2026 | *Este repositorio es de acceso público.*
