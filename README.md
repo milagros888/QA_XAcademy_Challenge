@@ -6,7 +6,7 @@
 
 * [Drive](https://drive.google.com/drive/folders/15RXJyLj8uruPAnnh6wLKC6I6FTHYMP23) - Carpeta compartida para el equipo.
 * [Casos de Prueba](https://docs.google.com/spreadsheets/d/1HvECogJ3xM9bXqu5aTH7l92xTlssPBjfWKN74BWISFI/edit?usp=sharing) - Planilla con nuestros casos de prueba documentados.
-* [Docs + Email](https://docs.google.com/document/d/1D8KksuMfrgKq27PqPOypoTpsfxOe8_kiHA4LyXXDPLw/edit?usp=sharing) - Planilla con nuestros casos de prueba documentados.
+* [Docs + Email](https://docs.google.com/document/d/1D8KksuMfrgKq27PqPOypoTpsfxOe8_kiHA4LyXXDPLw/edit?usp=sharing) - Documento compartido con Emails de equipo.
 * [Challenge](https://drive.google.com/file/d/1Nhhz3rIxxQguuZFb5Fm_fAJPHPUruhgg/view) - Datos sobre el Challenge.
 * [Trello](https://trello.com/b/M4ziTvVO/grupo-19-challenge) - Ticketera para el reporte de Bugs.
 * [Automation In Testing](https://automationintesting.online/) - Entorno de pruebas.
