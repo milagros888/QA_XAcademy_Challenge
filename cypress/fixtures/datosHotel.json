@@ -1,0 +1,17 @@
+{
+  "usuarioAdmin": {
+    "user": "admin",
+    "password": "password"
+  },
+  "caso10_mensaje": {
+    "name": "Tester Automatizado",
+    "email": "cypress-test@ejemplo.com",
+    "phone": "01123456789",
+    "subject": "Reserva Urgente 011",
+    "description": "Hola, esto es una prueba automatizada para validar el buzón de entrada."
+  },
+  "caso12_reporte": {
+    "mesEsperado": "March 2026",
+    "reservaEsperada": "Timothy Barrow - Room: 103"
+  }
+}
