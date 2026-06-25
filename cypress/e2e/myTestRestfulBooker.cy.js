@@ -228,7 +228,7 @@ describe("Navegación - Shady Meadows", () => {
 });
 
 // ============================================================================
-// SUITE 2: MÓDULO DE ADMINISTRACIÓN
+// SUITE 3: MÓDULO DE ADMINISTRACIÓN
 // ============================================================================
 
 describe('Administración - Pruebas de Login', () => {
@@ -374,4 +374,66 @@ describe('Administración - Pruebas de "Report" y "Mensajes"', () => {
         .should('have.text', datos.caso12_reporte.reservaEsperada);
     });
   });
+});
+
+// ============================================================================
+// SUITE 4: MÓDULO CONTACTO
+// ============================================================================
+
+describe('Módulo Contacto - Shady Meadows', () => {
+
+    // Ignoramos los errores internos de React para evitar bloqueos
+    Cypress.on('uncaught:exception', () => false);
+
+    beforeEach(() => {
+        // Interceptamos la petición POST que envía el mensaje
+        cy.intercept('POST', '**/message').as('enviarMensaje');
+        
+        cy.visit('https://automationintesting.online/');
+        cy.contains('Contact').click(); 
+    });
+
+    context('Flujos positivos y validaciones base', () => {
+        
+        it('TC-CONT-01: Envío exitoso del formulario con datos válidos', () => {
+            cy.fixture('contacto').then((data) => {
+                cy.completarFormularioContacto(data.valido);
+                
+                // Aseguramos que sea un botón visible antes de hacer clic
+                cy.contains('button', 'Submit').should('be.visible').click();
+
+                // Esperamos a que el servidor reciba el mensaje (Status 201 Created)
+                cy.wait('@enviarMensaje').its('response.statusCode').should('eq', 200);
+
+                // Validamos que se muestre el texto de confirmación
+                cy.get('#contact h3') 
+                    .should('contain.text', 'Thanks for getting in touch')
+                    .and('contain.text', data.valido.name); 
+            });
+        });
+
+        it('TC-CONT-02: Intento envío con formulario vacío', () => {
+            cy.contains('button', 'Submit').should('be.visible').click();
+
+            // Validamos que se muestren los mensajes de error correspondientes 
+            // para cada campo obligatorio
+            cy.get('.alert.alert-danger')
+                .should('be.visible')
+                .within(() => {
+                    cy.contains('Name may not be blank').should('be.visible');
+                    cy.contains('Email may not be blank').should('be.visible');
+                });
+        });
+
+        it('TC-CONT-03: Validación de longitud mínima en el campo Message', () => {
+            cy.fixture('contacto').then((data) => {
+                cy.completarFormularioContacto(data.mensajeCorto);
+                cy.contains('button', 'Submit').should('be.visible').click();
+
+                cy.get('.alert.alert-danger')
+                    .should('be.visible')
+                    .and('contain.text', 'Message must be between 20 and 2000 characters.');
+            }); 
+        });
+    });
 });

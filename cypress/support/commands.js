@@ -79,3 +79,12 @@ Cypress.Commands.add('enviarMensajePublico', (name, email, phone, subject, descr
   // Hacer clic en el botón de enviar
   cy.get('.d-grid > .btn').click();
 });
+
+// Comando para completar el formulario de contacto con datos de un fixture
+Cypress.Commands.add('completarFormularioContacto', (datos) => {
+    cy.get('#name').type(datos.name)
+    cy.get('#email').type(datos.email)
+    cy.get('#phone').type(datos.phone)
+    cy.get('#subject').type(datos.subject)
+    cy.get('#description').type(datos.message)
+})

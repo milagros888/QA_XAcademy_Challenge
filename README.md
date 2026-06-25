@@ -65,4 +65,14 @@ El proyecto está diseñado siguiendo las buenas prácticas de Page Object Model
 4. Para correr las pruebas en modo *headless* (consola), ejecuta: `npx cypress run`.
 
 ---
+
+## 📊 Resultados de la Automatización
+
+A continuación, se evidencia la ejecución exitosa de la suite completa de pruebas, demostrando la estabilidad y el correcto funcionamiento de los flujos de Reservas, Contacto y Administración:
+
+![Ejecución exitosa de Cypress](./imagenes/Captura.jpg)
+*Suite de Cypress: 17/17 tests aprobados (100% de éxito).*
+
+---
+
 **📅 Fecha Límite de Entrega:** 25/06/2026 | *Este repositorio es de acceso público.*

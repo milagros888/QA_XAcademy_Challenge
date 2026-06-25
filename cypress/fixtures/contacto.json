@@ -1,0 +1,44 @@
+{
+"valido": {
+    "name": "Juan Perez",
+    "email": "juanperez@gmail.com",
+    "phone": "5491178962463",
+    "subject": "Consulta sobre disponibilidad",
+    "message": "Quisiera saber más sobre las habitaciones disponibles para el próximo mes."
+},
+"mensajeCorto": {
+    "name": "Juan Perez",
+    "email": "juan@test.com",
+    "phone": "5491185697896",
+    "subject": "Consulta general",
+    "message": "Aca, testeando"
+},
+"nombreNum": {
+    "name": "123456",
+    "email": "juan@test.com",
+    "phone": "5491185697896",
+    "subject": "Consulta",
+    "message": "Quisiera saber más sobre las habitaciones disponibles para el próximo mes."
+},
+"emailInvalido": {
+    "name": "Juan Perez",
+    "email": "juanperez@lala",
+    "phone": "5491185697896",
+    "subject": "Consulta",
+    "message": "Quisiera saber más sobre las habitaciones disponibles para el próximo mes."
+},
+"nameUnCaracter": {
+    "name": "A",
+    "email": "ana@test.com",
+    "phone": "111578965423",
+    "subject": "Consulta",
+    "message": "Quisiera más información sobre la disponibilidad de habitaciones para el próximo mes."
+},
+"phoneEspecial": {
+    "name": "Juan Perez",
+    "email": "juan@test.com",
+    "phone": "1!378#879!!",
+    "subject": "Consulta",
+    "message": "Quisiera saber más sobre las habitaciones disponibles para el próximo mes."
+}
+}
