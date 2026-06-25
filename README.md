@@ -1,6 +1,6 @@
-# 🚀 Challenge de Cypress Automation | XAcademy - Technology with Purpose
+# 🚀 Challenge de Cypress Automation | XAcademy - Technology con Propósito
 
-Bienvenido al repositorio oficial del equipo para el Trabajo Final de la Cohorte I - 2026. En este proyecto ponemos en práctica los conocimientos adquiridos de QA Automation aplicando pruebas End-to-End (E2E) sobre el sistema web real de reservas de un Bed & Breakfast: [Shady Meadows](https://automationintesting.online/).
+Bienvenido al repositorio oficial del **Grupo 19** para el Trabajo Final de la Cohorte I - 2026. En este proyecto ponemos en práctica los conocimientos adquiridos de QA Automation aplicando pruebas End-to-End (E2E) sobre el sistema web real de reservas de un Bed & Breakfast: [Shady Meadows](https://automationintesting.online/).
 
 ---
 
@@ -8,14 +8,14 @@ Bienvenido al repositorio oficial del equipo para el Trabajo Final de la Cohorte
 
 Para cumplir con los criterios de evaluación, toda nuestra documentación técnica está centralizada en los siguientes enlaces:
 
-* 📄 **[Plan de Pruebas (Casos de Prueba)](https://docs.google.com/spreadsheets/d/1HvECogJ3xM9bXqu5aTH7l92xTlssPBjfWKN74BWISFI/edit?usp=sharing)**: Documento detallado en Drive con la redacción de escenarios positivos, negativos y de borde.
-* 🐞 **[Tablero de Bugs (Trello)](https://trello.com/invite/b/6a2b29b40986c4a96b7e7842/ATTI491d39acad953056a71f3f9f80b0b8698CDBE2AE/grupo-19-challenge)**: Gestión y reporte de defectos encontrados en la aplicación.
+* 📄 **[Plan de Pruebas (Casos de Prueba)](https://drive.google.com/drive/folders/15RXJyLj8uruPAnnh6wLKC6I6FTHYMP23)**: Documento detallado en Drive con la redacción de escenarios positivos, negativos y de borde.
+* 🐞 **[Tablero de Bugs (Trello)](https://trello.com/invite/b/6a2b29b40986c4a96b7e7842/ATTI491d39acad953056a71f3f9f80b0b8698CDBE2AE/grupo-19-challenge)**: Gestión y reporte de los defectos encontrados en la aplicación.
 * 🌐 **[Entorno de Pruebas](https://automationintesting.online/)**: Aplicación web testeada.
 * 📋 **[Consigna del Challenge](https://drive.google.com/file/d/1Nhhz3rIxxQguuZFb5Fm_fAJPHPUruhgg/view)**: Requisitos del proyecto.
 
 ---
 
-## 👥 Integrantes del Equipo
+## 👥 Integrantes del Equipo (Grupo 19)
 
 * Hilen Ortiz
 * Milagros Escarlon
@@ -26,53 +26,49 @@ Para cumplir con los criterios de evaluación, toda nuestra documentación técn
 
 ## 🎯 Escenarios Automatizados
 
-Nuestra suite principal (`myTestRestfulBooker.cy.js`) abarca los siguientes flujos requeridos, diseñados con la premisa de que los tests puedan ejecutarse de forma 100% independiente:
+Nuestra suite principal abarca el 100% de los flujos requeridos, diseñados con la premisa de Test Isolation para que cada prueba se ejecute de forma hermética e independiente:
 
-1. **Reserva exitosa como usuario invitado:** Navegación, selección de fechas, llenado de formulario con datos válidos y aserción de confirmación exitosa.
-2. **Validaciones del formulario de reserva:** Intentos de envío con campos vacíos y validación de la aparición de alertas de error, asegurando que no se concrete la reserva.
-3. **Formulario de contacto:** Llenado y envío de mensaje de contacto con datos válidos y verificación de la notificación de éxito.
-
-*(Adicionalmente, se incluyeron casos extra para el módulo de Administración utilizando técnicas avanzadas de testing).*
+1. **Reserva exitosa y validaciones:** Generación dinámica de fechas, verificación del *Price Summary* e intentos de envío con campos vacíos.
+2. **Formulario de Contacto:** Llenado y envío de mensajes, validando confirmaciones exitosas (Status 200) y mensajes de error por formato y longitud.
+3. **Panel de Administración:** Flujos de Login, lectura de notificaciones, y creación/eliminación de habitaciones generando data temporal propia.
+4. **Navegación UI/UX:** Comprobación de *smooth scroll* y visibilidad de las secciones.
 
 ---
 
 ## 🛠️ Tecnologías y Herramientas Utilizadas
 
-* **[Cypress](https://www.cypress.io/)**: Framework de pruebas End-to-End.
-* **[JavaScript](https://developer.mozilla.org/es/docs/Web/JavaScript)**: Lenguaje de programación.
+* **[Cypress](https://www.cypress.io/)**: Framework E2E principal.
+* **[JavaScript](https://developer.mozilla.org/es/docs/Web/JavaScript)**: Lenguaje base de la automatización.
 * **[Node.js](https://nodejs.org/)**: Entorno de ejecución.
-* **[Visual Studio Code](https://code.visualstudio.com/)**: IDE de desarrollo.
+* **Patrones Implementados:** Data-Driven Testing (Fixtures) y Custom Commands.
 
 ---
 
 ## 📁 Estructura del Proyecto
 
-El proyecto está diseñado siguiendo las buenas prácticas de Page Object Model y Data-Driven Testing:
-
-* 📁 **`cypress/e2e/`**: Contiene el archivo principal de pruebas `myTestRestfulBooker.cy.js`.
-* 📁 **`cypress/fixtures/`**: Archivos JSON estáticos para parametrizar datos (Data-Driven Testing).
-* 📁 **`cypress/support/`**: Comandos personalizados (`commands.js`) para evitar la repetición de código y configuraciones globales.
+* 📁 **`cypress/e2e/`**: Contiene la suite central de pruebas.
+* 📁 **`cypress/fixtures/`**: Archivos JSON estáticos (`datosHotel.json`, `contacto.json`) para parametrizar la data.
+* 📁 **`cypress/support/`**: Comandos personalizados (`commands.js`) para abstraer lógicas repetitivas y robustecer el código.
 * 📄 **`cypress.config.js`**: Configuración global de la herramienta.
-* 📄 **`package.json`**: Dependencias y scripts de ejecución.
-
----
-
-## 🚀 Cómo ejecutar las pruebas
-
-1. Clona este repositorio en tu máquina local.
-2. Abre la terminal en la raíz del proyecto y ejecuta `npm install` para instalar las dependencias.
-3. Para abrir la interfaz gráfica de Cypress, ejecuta: `npx cypress open`.
-4. Para correr las pruebas en modo *headless* (consola), ejecuta: `npx cypress run`.
 
 ---
 
 ## 📊 Resultados de la Automatización
 
-A continuación, se evidencia la ejecución exitosa de la suite completa de pruebas, demostrando la estabilidad y el correcto funcionamiento de los flujos de Reservas, Contacto y Administración:
+A continuación, se evidencia la ejecución exitosa de la suite completa de pruebas, demostrando la estabilidad y el correcto funcionamiento de todos los flujos E2E:
 
-![Ejecución exitosa de Cypress](./imagenes/Captura.jpg)
+![Ejecución exitosa de Cypress](./imagenes/Captura.JPG)
+
 *Suite de Cypress: 17/17 tests aprobados (100% de éxito).*
 
 ---
 
+## 🚀 Cómo ejecutar las pruebas localmente
+
+1. Clona este repositorio: `git clone [url-del-repo]`
+2. Instala las dependencias: `npm install`
+3. Abre la interfaz gráfica: `npx cypress open`
+4. Ejecuta en consola (headless): `npx cypress run`
+
+---
 **📅 Fecha Límite de Entrega:** 25/06/2026 | *Este repositorio es de acceso público.*
