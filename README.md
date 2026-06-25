@@ -8,7 +8,7 @@ Bienvenido al repositorio oficial del **Grupo 19** para el Trabajo Final de la C
 
 Para cumplir con los criterios de evaluación, toda nuestra documentación técnica está centralizada en los siguientes enlaces:
 
-* 📄 **[Plan de Pruebas (Casos de Prueba)](https://drive.google.com/drive/folders/15RXJyLj8uruPAnnh6wLKC6I6FTHYMP23)**: Documento detallado en Drive con la redacción de escenarios positivos, negativos y de borde.
+* 📄 **[Plan de Pruebas (Casos de Prueba)](https://docs.google.com/spreadsheets/d/1HvECogJ3xM9bXqu5aTH7l92xTlssPBjfWKN74BWISFI/edit?gid=1611920195#gid=1611920195)**: Documento detallado en Drive con la redacción de escenarios positivos, negativos y de borde.
 * 🐞 **[Tablero de Bugs (Trello)](https://trello.com/invite/b/6a2b29b40986c4a96b7e7842/ATTI491d39acad953056a71f3f9f80b0b8698CDBE2AE/grupo-19-challenge)**: Gestión y reporte de los defectos encontrados en la aplicación.
 * 🌐 **[Entorno de Pruebas](https://automationintesting.online/)**: Aplicación web testeada.
 * 📋 **[Consigna del Challenge](https://drive.google.com/file/d/1Nhhz3rIxxQguuZFb5Fm_fAJPHPUruhgg/view)**: Requisitos del proyecto.
