@@ -20,7 +20,7 @@ Para cumplir con los criterios de evaluación, toda nuestra documentación técn
 * Hilen Ortiz
   - hilensortiz@gmail.com
 * Milagros Escarlon
-  - milagrosescarln@yahoo.com.ar
+  - milagrosescarln1@gmail.com
 * Natacha Rodriguez
   - natacharodriguez.it@gmail.com
 * Rocio Vera López
