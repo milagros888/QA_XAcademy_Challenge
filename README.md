@@ -15,12 +15,16 @@ Para cumplir con los criterios de evaluación, toda nuestra documentación técn
 
 ---
 
-## 👥 Integrantes del Equipo (Grupo 19)
+## 👥 Integrantes del Equipo + Emails (Grupo 19)
 
 * Hilen Ortiz
+  - hilensortiz@gmail.com
 * Milagros Escarlon
+  - milagrosescarln@yahoo.com.ar
 * Natacha Rodriguez
+  - natacharodriguez.it@gmail.com
 * Rocio Vera López
+  - rochioveralopez@gmail.com
 
 ---
 
